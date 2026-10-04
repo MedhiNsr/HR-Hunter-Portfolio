@@ -1,0 +1,122 @@
+{
+  "max_queries_per_source": 5,
+  "max_proposals_per_cycle": 3,
+  "max_new_proposals_per_day": 12,
+  "search_terms": [
+    "compliance analyst",
+    "aml analyst",
+    "kyc analyst",
+    "risk analyst",
+    "operational risk",
+    "operational resilience",
+    "dora compliance",
+    "regulatory compliance",
+    "financial crime",
+    "client onboarding",
+    "ict governance",
+    "it risk",
+    "grc consultant",
+    "regulatory consultant",
+    "change management"
+  ],
+  "locations": ["Luxembourg", "Paris"],
+  "sources": [
+    {
+      "name": "Bing targeted job search",
+      "type": "web_search",
+      "enabled": true,
+      "url_templates": [
+        "https://www.bing.com/search?format=rss&q={query}"
+      ],
+      "query_templates": [
+        "Luxembourg {term} job",
+        "Paris {term} job",
+        "site:linkedin.com/jobs Luxembourg {term}",
+        "site:adem.public.lu Luxembourg {term}"
+      ],
+      "queries_per_cycle": 5,
+      "company_queries_per_cycle": 2,
+      "rotation_interval_minutes": 30
+    },
+    {
+      "name": "Business France - Mon V.I.E VIA",
+      "type": "web_search",
+      "enabled": true,
+      "url_templates": [
+        "https://www.bing.com/search?format=rss&q={query}"
+      ],
+      "query_templates": [
+        "site:mon-vie-via.businessfrance.fr Luxembourg VIE {term}",
+        "site:mon-vie-via.businessfrance.fr Paris VIE {term}"
+      ],
+      "queries_per_cycle": 4,
+      "company_queries_per_cycle": 0,
+      "rotation_interval_minutes": 30
+    },
+    {
+      "name": "Moovijob and Free-Work targeted search",
+      "type": "web_search",
+      "enabled": true,
+      "url_templates": [
+        "https://www.bing.com/search?format=rss&q={query}"
+      ],
+      "query_templates": [
+        "site:moovijob.com/offres-emploi Luxembourg {term}",
+        "site:free-work.com/fr/tech-it/job Paris {term}"
+      ],
+      "queries_per_cycle": 5,
+      "company_queries_per_cycle": 0,
+      "rotation_interval_minutes": 30
+    },
+    {
+      "name": "Indeed Luxembourg",
+      "type": "search_page",
+      "enabled": false,
+      "url_templates": [
+        "https://lu.indeed.com/jobs?q={query}&l=Luxembourg"
+      ]
+    },
+    {
+      "name": "Moovijob Luxembourg",
+      "type": "search_page",
+      "enabled": false,
+      "url_templates": [
+        "https://www.moovijob.com/offres-emploi/jobs-luxembourg?q={query}"
+      ]
+    },
+    {
+      "name": "Welcome to the Jungle Luxembourg",
+      "type": "search_page",
+      "enabled": true,
+      "queries_per_cycle": 5,
+      "rotation_interval_minutes": 30,
+      "url_templates": [
+        "https://www.welcometothejungle.com/en/jobs?query={query}&aroundQuery=Luxembourg%2C%20Luxembourg"
+      ]
+    },
+    {
+      "name": "ADEM Luxembourg",
+      "type": "manual_watch",
+      "enabled": true,
+      "url_templates": [
+        "https://adem.public.lu/en/jobboard.html"
+      ]
+    },
+    {
+      "name": "LinkedIn Jobs Luxembourg",
+      "type": "manual_watch",
+      "enabled": true,
+      "url_templates": [
+        "https://www.linkedin.com/jobs/search/?keywords={query}&location=Luxembourg"
+      ]
+    },
+    {
+      "name": "Indeed Paris",
+      "type": "search_page",
+      "enabled": false,
+      "url_templates": [
+        "https://fr.indeed.com/jobs?q={query}&l=Paris"
+      ]
+    }
+  ]
+}

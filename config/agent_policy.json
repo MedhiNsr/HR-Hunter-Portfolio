@@ -1,0 +1,94 @@
+{
+  "project_name": "HR Hunter",
+  "candidate_email": "candidate@example.com",
+  "validation_channel": "Telegram",
+  "telegram": {
+    "mode": "group_chat",
+    "participants": [
+      "Candidate",
+      "Reviewer",
+      "HR Hunter Bot"
+    ],
+    "approval_words": [
+      "oui",
+      "yes",
+      "go",
+      "ok"
+    ],
+    "rejection_words": [
+      "non",
+      "no",
+      "skip",
+      "stop"
+    ],
+    "single_approval_is_enough": true,
+    "morning_message_time": "09:30",
+    "daily_report_time": "18:00",
+    "weekly_report_days": [
+      "Monday",
+      "Friday"
+    ]
+  },
+  "automation": {
+    "monitoring": "24/7",
+    "search_interval_minutes": 30,
+    "send_email_immediately_after_approval": true,
+    "gmail_connection_status": "configure_locally",
+    "fallback_until_gmail_ready": "not_needed",
+    "follow_up_after_days": 5,
+    "manual_channels": [
+      "LinkedIn Jobs",
+      "complex application portals"
+    ],
+    "auto_channels": [
+      "email applications",
+      "simple forms after confirmation"
+    ]
+  },
+  "markets": {
+    "primary": [
+      "Luxembourg"
+    ],
+    "secondary": [
+      "Paris"
+    ]
+  },
+  "source_sites": [
+    "LinkedIn Jobs",
+    "Moovijob",
+    "Indeed",
+    "ADEM",
+    "Business France - Mon V.I.E VIA",
+    "Welcome to the Jungle",
+    "company career pages",
+    "recruitment agencies"
+  ],
+  "application_statuses": [
+    "found",
+    "scored",
+    "proposed",
+    "review_required",
+    "validated",
+    "contact_review",
+    "contact_confirmed",
+    "prepared",
+    "prepared_dry_run",
+    "prepared_manual_send",
+    "sent",
+    "send_failed",
+    "follow_up_failed",
+    "manual_action_required",
+    "manual_reminder_sent",
+    "follow_up_1_sent",
+    "follow_up_2_sent",
+    "followed_up",
+    "interview",
+    "rejected",
+    "accepted"
+  ],
+  "human_in_the_loop": {
+    "required_before_email_send": true,
+    "required_before_form_submit": true,
+    "required_for_linkedin": true
+  }
+}
